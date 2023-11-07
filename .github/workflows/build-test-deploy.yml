@@ -1,7 +1,7 @@
 name: hello-world
 on: push
 jobs: 
-  hello-world-job:
+  build:
     runs-on: ubuntu-latest
     steps: 
       - name: Check out repository code
@@ -12,3 +12,4 @@ jobs:
           node-version: '18.x'
       - run: npm install
       - run: npm run build
+      - run: npm test
